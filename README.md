@@ -11,12 +11,11 @@ Sistem ayrıca discord.js uyumludur. Bot oluşturup sohbete **.!backlink <url(y�
 
 ```
 const { Client, Intents } = require('discord.js');
-const fetch = require('node-fetch'); // Fetch modülünü kullanarak HTTP istekleri yapacağız.
+const fetch = require('node-fetch');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 const token = 'YOUR_BOT_TOKEN';  // Bot tokenınızı buraya yazın
 
-// Kullanıcı başına özel backend URL'leri saklanacak
 const userBackendUrls = {};
 
 client.once('ready', () => {
